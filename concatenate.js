@@ -6,7 +6,7 @@ concatenate = async () => {
         './dist/apps/angular-elements-example-child-app/main.js'
     ];
 
-    await concat(files, './dist/apps/angular-elements-example-child-app/exampleScript.js');
+    await concat(files, './dist/apps/static/exampleScript.js');
 }
 
 concatenate();
