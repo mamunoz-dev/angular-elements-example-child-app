@@ -7,7 +7,7 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build  --prod --output-hashing none",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
@@ -25,7 +25,8 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "package": "node concatenate.js"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +43,7 @@
     "@nestjs/core": "^7.0.0",
     "@nestjs/platform-express": "^7.0.0",
     "@nrwl/angular": "11.1.5",
+    "concat": "^1.0.3",
     "elements-zone-strategy": "^10.0.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.5",
